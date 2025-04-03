@@ -55,9 +55,9 @@ CSVAlchemy provides integration with OpenAI's LLM services alongside Excel proce
 ## Usage
 
 ```python
-from CSVAlchemy_sdk.core import encode_workbook
-from CSVAlchemy_sdk.utils import load_workbook_from_file
-from CSVAlchemy_sdk.config import get_config
+from CSValchemy_sdk.core import encode_workbook
+from CSValchemy_sdk.utils import load_workbook_from_file
+from CSValchemy_sdk.config import get_config
 
 # Process spreadsheets
 workbook = load_workbook_from_file("Company_Financial_Data_For_PE.xlsx")
@@ -74,8 +74,8 @@ print(f"Processed {len(encoded_data['sheets'])} sheets")
 CSVAlchemy offers extensive configuration options:
 
 ```python
-from CSVAlchemy_sdk import encode_workbook
-from CSVAlchemy_sdk.config import get_config
+from CSValchemy_sdk import encode_workbook
+from CSValchemy_sdk.config import get_config
 
 # Get default configuration
 config = get_config()
