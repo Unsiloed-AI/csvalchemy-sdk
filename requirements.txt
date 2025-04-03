@@ -1,0 +1,16 @@
+pandas
+numpy
+openpyxl
+sentence-transformers
+pathlib
+fastapi
+uvicorn
+python-multipart
+psutil
+openai
+pydantic
+pydantic-settings
+python-dotenv
+zipfile36
+uvicorn
+gunicorn

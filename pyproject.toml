@@ -1,0 +1,32 @@
+[project]
+name = "csvalchemy_sdk"
+version = "0.1.1"
+description = "A lightweight Python client SDK for the CSValchemy API"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+authors = [
+  { name = "Your Name", email = "your@email.com" }
+]
+dependencies = [
+  "requests>=2.25",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
