@@ -74,8 +74,8 @@ print(f"Processed {len(encoded_data['sheets'])} sheets")
 CSVAlchemy offers extensive configuration options:
 
 ```python
-from CSVAlchemy_sdk import encode_workbook
-from CSVAlchemy_sdk.config import get_config
+from CSVAalchemy_sdk import encode_workbook
+from CSValchemy_sdk.config import get_config
 
 # Get default configuration
 config = get_config()
