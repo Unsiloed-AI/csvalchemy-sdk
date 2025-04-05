@@ -1,6 +1,6 @@
 # CSVAlchemy
 
-A  Python SDK for processing and analyzing spreadsheets using LLMs.
+A Python SDK for processing spreadsheets.
 
 ## Installation
 
@@ -10,223 +10,139 @@ pip install CSVAlchemy-sdk
 
 ## Overview
 
-CSVAlchemy provides integration with OpenAI's LLM services alongside Excel processing capabilities. The library helps you efficiently process, analyze, and extract insights from spreadsheet data.
+CSVAlchemy provides tools for processing Excel and potentially other spreadsheet formats. The library helps you extract data from spreadsheet files.
 
 ## Features
 
-* **Spreadsheet Processing** - Handle Excel and CSV files with advanced features
-* **LLM Integration** - Seamless integration with OpenAI's language models
-* **Data Extraction** - Extract structured data from complex spreadsheets
-* **Formula Extraction** - Extract all the formula's from you spreadsheets
-* **Pivot Table Support** - Process and analyze pivot tables
-* **Chart Analysis** - Extract and encode chart data
-* **Conditional Formatting** - Capture conditional formatting rules
-* **API Client** - Easy-to-use client for the CSVAlchemy API
-
-## CSVAlchemy Feature Comparison
-
-| Feature                          | Support                                        |
-|----------------------------------|------------------------------------------------|
-| Excel (.xlsx) Processing         | ✓                                              |
-| CSV Processing                   | ✓                                              |
-| OpenAI LLM Integration           | ✓                                              |
-| Formula Extraction               | ✓                                              |
-| Pivot Table Support              | ✓                                              |
-| Chart Analysis                   | ✓                                              |
-| Conditional Formatting           | ✓                                              |
-| Data Validation Detection        | ✓                                              |
-| Merged Cell Detection            | ✓                                              |
-| Header Detection                 | ✓ (configurable)                               |
-| Structural Anchor Extraction     | ✓                                              |
-| External Data Connections        | ✓ (configurable)                               |
-| VBA Macro Processing             | ✓ (configurable)                               |
-| RESTful API Access               | ✓ (FastAPI endpoints)                          |
-| Python SDK                       | ✓                                              |
-| Customizable Configuration       | ✓                                              |
-| Error Handling Modes             | ✓ (skip, warn, raise, fallback)                |
-| Parallel Processing              | ✓                                              |
-| Memory Optimization              | ✓ (chunking for large spreadsheets)            |
-| Docker Deployment                | ✓                                              |
-| Cloud Deployment                 | ✓                                              |
-| Authentication                   | ✓ (via environment variables)                  |
-| Comprehensive Logging            | ✓                                              |
-| Open Source                      | ✓ (MIT License)                                |
+* **Spreadsheet Processing** - Handles Excel (.xlsx) files.
+* **Data Extraction** - Extracts data from spreadsheet cells.
+* **Configurable Parsing** - Allows customization of parsing behavior via configuration.
 
 ## Usage
 
 ```python
-from CSValchemy_sdk.core import encode_workbook
-from CSValchemy_sdk.utils import load_workbook_from_file
-from CSValchemy_sdk.config import get_config
+# Example usage (assuming functionality based on existing files)
+# Note: Actual function names and usage might differ based on implementation details
+# in spreadsheet_parser.py and excel.py
 
-# Process spreadsheets
-workbook = load_workbook_from_file("Company_Financial_Data_For_PE.xlsx")
-config = get_config()
-encoded_data = encode_workbook(workbook, config)
+# Likely involves loading a workbook and then parsing it
+# from CSVAlchemy.utils import load_workbook # Hypothetical import
+# from CSVAlchemy.core import parse_spreadsheet # Hypothetical import
+# from CSVAlchemy.config import get_config
 
-# Now use the encoded data in your application
-print("encoded_sheets ",encoded_data)
-print(f"Processed {len(encoded_data['sheets'])} sheets")
+# config = get_config()
+# workbook = load_workbook("your_spreadsheet.xlsx")
+# parsed_data = parse_spreadsheet(workbook, config)
+
+# print(parsed_data)
+
+# Please replace with actual usage examples once core functionality is confirmed.
+print("Please update this section with actual usage examples.")
 ```
-
-<!-- ## Advanced Configuration
-
-CSVAlchemy offers extensive configuration options:
-
-```python
-from CSValchemy_sdk import encode_workbook
-from CSValchemy_sdk.config import get_config
-
-# Get default configuration
-config = get_config()
-
-# Customize configuration
-config["features"]["pivot_tables"] = True
-config["error_handling"]["log_level"] = "DEBUG"
-
-# Process with custom configuration
-encoded = encode_workbook("your_spreadsheet.xlsx", config=config)
-``` -->
-
-
-
-## API Documentation
-
-Full API documentation is available at:
-- Interactive API docs: `/docs`
-- ReDoc API docs: `/redoc`
 
 ## Contributing to CSVAlchemy
 
-We welcome contributions from the community! This guide will help you set up your local development environment and understand our contribution process.
+We welcome contributions from the community!
 
 ### Local Development Setup
 
-1. **Fork and Clone the Repository**
+1.  **Fork and Clone the Repository**
 
-   ```bash
-   git clone https://github.com/Unsiloed-ai/spreadsheet-llm.git
-   cd spreadsheet-llm
-   ```
+    ```bash
+    git clone https://github.com/Unsiloed-AI/csvalchemy-sdk.git # Replace YOUR_USERNAME
+    cd csvalchemy-sdk
+    ```
 
-2. **Set Up a Virtual Environment**
+2.  **Set Up a Virtual Environment**
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+    We recommend using `uv` for package management.
 
-3. **Install Development Dependencies**
+    ```bash
+    # Install uv if you haven't already: https://github.com/astral-sh/uv
+    uv venv
+    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+    ```
 
-   ```bash
-   pip install -e ".[dev]"
-   ```
+3.  **Install Development Dependencies**
 
-4. **Set Up Environment Variables**
+    ```bash
+    uv pip install -e ".[dev]"
+    ```
 
-   Create a `.env` file in the project root:
-   
-   ```
-   OPENAI_API_KEY=your_api_key_here
-   ```
+4.  **(Optional) Set Up Environment Variables**
 
-5. **Run Tests to Verify Setup**
+    If specific environment variables are needed (e.g., for external services, though none seem required currently), create a `.env` file in the project root.
 
-   ```bash
-   pytest
-   ```
+5.  **Run Tests to Verify Setup**
+
+    ```bash
+    pytest
+    ```
 
 ### Development Workflow
 
-1. **Create a Feature Branch**
+1.  **Create a Feature Branch**
 
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+    ```bash
+    git checkout -b feature/your-feature-name
+    ```
 
-2. **Make Your Changes**
-   
-   - Write code following our style guidelines
-   - Add tests for new functionality
-   - Update documentation as needed
+2.  **Make Your Changes**
 
-3. **Run Tests and Linting**
+    - Write code following style guidelines.
+    - Add tests for new functionality.
+    - Update documentation as needed.
 
-   ```bash
-   # Run tests
-   pytest
-   
-   # Run linting
-   flake8
-   
-   # Run formatter
-   black .
-   ```
+3.  **Run Tests and Linting**
 
-4. **Commit Your Changes**
+    ```bash
+    # Run tests
+    pytest
 
-   ```bash
-   git add .
-   git commit -m "Add a descriptive commit message"
-   ```
+    # Run linting (assuming flake8 is used, adjust if different)
+    # flake8 CSVAlchemy tests
 
-5. **Push to Your Fork**
+    # Run formatter (assuming black is used, adjust if different)
+    # black CSVAlchemy tests
+    ```
+    *(Note: Please configure and add specific linting/formatting tools to `pyproject.toml`)*
 
-   ```bash
-   git push origin feature/your-feature-name
-   ```
+4.  **Commit Your Changes**
 
-6. **Create a Pull Request**
-   
-   Go to the [original repository](https://github.com/Unsiloed-AI/spreadsheet-llm) and create a pull request from your fork.
+    Use relevant emojis at the start of your commit messages (e.g., ✨ feat: Add new parser feature).
+
+    ```bash
+    git add .
+    git commit -m "✨ feat: Describe your change"
+    ```
+
+5.  **Push to Your Fork**
+
+    ```bash
+    git push origin feature/your-feature-name
+    ```
+
+6.  **Create a Pull Request**
+
+    Go to the original repository and create a pull request from your fork.
 
 ### Code Style Guidelines
 
-- Follow [PEP 8](https://peps.python.org/pep-0008/) standards
-- Use [Black](https://black.readthedocs.io/) for code formatting
-- Write docstrings for all functions, classes, and methods
-- Include type hints according to [PEP 484](https://peps.python.org/pep-0484/)
+- Follow [PEP 8](https://peps.python.org/pep-0008/) standards.
+- Use a consistent code formatter (e.g., [Black](https://black.readthedocs.io/)).
+- Write docstrings for public modules, functions, classes, and methods.
+- Include type hints according to [PEP 484](https://peps.python.org/pep-0484/).
 
 ### Pull Request Process
 
-1. Ensure all tests pass and code is properly formatted
-2. Update documentation if necessary
-3. Link any related issues in your PR description
-4. Wait for review from maintainers
-5. Address any requested changes
-6. Once approved, your PR will be merged
-
-### Running the API Locally
-
-To run the API server locally during development:
-
-```bash
-python run.py
-```
-
-The API will be available at http://localhost:8000 with interactive documentation at http://localhost:8000/docs.
-
-### Building the Package Locally
-
-To build the package locally:
-
-```bash
-python -m build
-```
-
-### Contact
-
-If you have questions or need help, please:
-- Open an issue on GitHub
-- Contact the maintainers at hello@unsiloed-ai.com
-
-Thank you for contributing to CSVAlchemy!
+1.  Ensure all tests pass and code is properly formatted/linted.
+2.  Update documentation if necessary.
+3.  Link any related issues in your PR description.
+4.  Wait for review from maintainers.
+5.  Address any requested changes.
+6.  Once approved, your PR will be merged.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## About
-
-Developed by [Unsiloed AI](https://unsiloed-ai.com)
+This project is licensed under the MIT License - see the `LICENSE` file for details.
 
