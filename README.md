@@ -10,12 +10,11 @@ pip install CSVAlchemy-sdk
 
 ## Overview
 
-CSVAlchemy provides integration with OpenAI's LLM services alongside Excel processing capabilities. The library helps you efficiently process, analyze, and extract insights from spreadsheet data.
+CSVAlchemy provides Excel processing capabilities. The library helps you efficiently process, analyze, and extract insights from spreadsheet data.
 
 ## Features
 
 * **Spreadsheet Processing** - Handle Excel and CSV files with advanced features
-* **LLM Integration** - Seamless integration with OpenAI's language models
 * **Data Extraction** - Extract structured data from complex spreadsheets
 * **Formula Extraction** - Extract all the formula's from you spreadsheets
 * **Pivot Table Support** - Process and analyze pivot tables
@@ -32,7 +31,6 @@ CSVAlchemy provides integration with OpenAI's LLM services alongside Excel proce
 | Merged Cell Detection            | ✓                                              |
 | Header Detection                 | ✓ (configurable)                               |
 | Structural Anchor Extraction     | ✓                                              |
-| RESTful API Access               | ✓ (FastAPI endpoints)                          |
 | Python SDK                       | ✓                                              |
 | Customizable Configuration       | ✓                                              |
 | Error Handling Modes             | ✓ (configurable)                               |
@@ -109,14 +107,6 @@ We welcome contributions from the community! This guide will help you set up you
 
    ```bash
    pip install -e ".[dev]"
-   ```
-
-4. **Set Up Environment Variables**
-
-   Create a `.env` file in the project root:
-   
-   ```
-   OPENAI_API_KEY=your_api_key_here
    ```
 
 5. **Run Tests to Verify Setup**

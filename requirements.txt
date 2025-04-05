@@ -7,7 +7,6 @@ fastapi
 uvicorn
 python-multipart
 psutil
-openai
 pydantic
 pydantic-settings
 python-dotenv
