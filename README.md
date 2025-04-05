@@ -42,18 +42,21 @@ CSVAlchemy provides Excel processing capabilities. The library helps you efficie
 ## Usage
 
 ```python
-from CSValchemy_sdk.core import encode_workbook
-from CSValchemy_sdk.utils import load_workbook_from_file
-from CSValchemy_sdk.config import get_config
+from CSVAlchemy.core import encode_workbook
+from CSVAlchemy.utils import load_workbook_from_file
+from CSVAlchemy.config import get_config
 
-# Process spreadsheets
-workbook = load_workbook_from_file("Company_Financial_Data_For_PE.xlsx")
+
 config = get_config()
-encoded_data = encode_workbook(workbook, config)
+print("Default config:", config)
 
-# Now use the encoded data in your application
-print("encoded_sheets ",encoded_data)
-print(f"Processed {len(encoded_data['sheets'])} sheets")
+try:
+    # Replace with path to your test Excel file
+    workbook = load_workbook_from_file("Company_Financial_Data_For_PE.xlsx")
+    encoded_data = encode_workbook(workbook, config)
+    print(f"Processed {len(encoded_data['sheets'])} sheets")
+except Exception as e:
+    print(f"Error processing workbook: {e}")
 ```
 
 <!-- ## Advanced Configuration
@@ -61,8 +64,8 @@ print(f"Processed {len(encoded_data['sheets'])} sheets")
 CSVAlchemy offers extensive configuration options:
 
 ```python
-from CSValchemy_sdk import encode_workbook
-from CSValchemy_sdk.config import get_config
+from CSVAlchemy_sdk import encode_workbook
+from CSVAlchemy_sdk.config import get_config
 
 # Get default configuration
 config = get_config()
@@ -77,11 +80,11 @@ encoded = encode_workbook("your_spreadsheet.xlsx", config=config)
 
 
 
-## API Documentation
+<!-- ## API Documentation
 
 Full API documentation is available at:
 - Interactive API docs: `/docs`
-- ReDoc API docs: `/redoc`
+- ReDoc API docs: `/redoc` -->
 
 ## Contributing to CSVAlchemy
 

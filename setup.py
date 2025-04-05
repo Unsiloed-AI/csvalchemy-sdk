@@ -4,8 +4,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="CSVAlchemy",
-    version="0.1.1",
+    name="CSVAlchemy_sdk",
+    version="0.1.3",
     author="Unsiloed.Ai",
     author_email="hello@unsiloed.ai",
     description="This API provides Excel processing encoding techniqeus to make Excel files LLM ready.",
