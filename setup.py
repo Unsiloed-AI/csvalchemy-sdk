@@ -4,14 +4,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="csvalchemy_sdk",
+    name="CSVAlchemy",
     version="0.1.1",
     author="Unsiloed.Ai",
     author_email="hello@unsiloed.ai",
     description="This API provides Excel processing encoding techniqeus to make Excel files LLM ready.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Unsiloed-AI/spreadsheet-llm",
+    url="https://github.com/Unsiloed-AI/csvalchemy-sdk",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

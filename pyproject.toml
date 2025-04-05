@@ -1,5 +1,5 @@
 [project]
-name = "csvalchemy_sdk"
+name = "CSVAlchemy"
 version = "0.1.1"
 description = "A lightweight Python client SDK for the CSValchemy API"
 readme = "README.md"
