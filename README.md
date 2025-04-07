@@ -112,12 +112,6 @@ We welcome contributions from the community! This guide will help you set up you
    pip install -e ".[dev]"
    ```
 
-5. **Run Tests to Verify Setup**
-
-   ```bash
-   pytest
-   ```
-
 ### Development Workflow
 
 1. **Create a Feature Branch**
