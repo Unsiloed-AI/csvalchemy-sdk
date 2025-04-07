@@ -95,8 +95,8 @@ We welcome contributions from the community! This guide will help you set up you
 1. **Fork and Clone the Repository**
 
    ```bash
-   git clone https://github.com/Unsiloed-ai/spreadsheet-llm.git
-   cd spreadsheet-llm
+   git clone https://github.com/Unsiloed-ai/csvalchemy-sdk.git
+   cd csvalchemy-sdk
    ```
 
 2. **Set Up a Virtual Environment**
@@ -160,7 +160,7 @@ We welcome contributions from the community! This guide will help you set up you
 
 6. **Create a Pull Request**
    
-   Go to the [original repository](https://github.com/Unsiloed-AI/spreadsheet-llm) and create a pull request from your fork.
+   Go to the [original repository](https://github.com/Unsiloed-AI/csvalchemy-sdk) and create a pull request from your fork.
 
 ### Code Style Guidelines
 
